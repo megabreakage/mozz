@@ -1,0 +1,27 @@
+{
+  "developer1": {
+    "name": "Martin",
+    "age": "25",
+    "company": "iO inc"
+  },
+  "developer2": {
+    "name": "Kennedy",
+    "age": "24",
+    "company": "Strathmore Uni"
+  },
+  "developer3": {
+    "name": "Augustine",
+    "age": "25",
+    "company": "Freelance inc."
+  },
+  "Scientist1": {
+    "name": "Vee",
+    "age": "24",
+    "company": "Energyne Ltd"
+  },
+  "Scientist2": {
+    "name": "Mercy",
+    "age": "22",
+    "company": "BioChemy LLP"
+  }
+}
