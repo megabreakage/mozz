@@ -37,6 +37,21 @@ $(document).ready(function(){
       alert(smallHook);
     });
 
+  var units = '';
+
+  $('#meters').click(function(){
+    units = $('#meters').val();
+  });
+  $('#centimeters').click(function(){
+    units = $('#centimeters').val();
+  });
+  $('#inches').click(function(){
+    units = $('#inches').val();
+  });
+  $('#feet').click(function(){
+    units = $('#feet').val();
+  });
+
   $('#rod').click(function(){
     $('#hooks').hide('slow');
     bigHook = false;
@@ -54,7 +69,20 @@ $(document).ready(function(){
   $('#platinum').click(function(){
     $('#cartEmpty').hide();
     $('#cart').show('slow');
-    var length =  parseFloat($('input#materialSize').val());
+    var cutSize =parseFloat($('input#materialSize').val());
+    var length = 0;
+    //convert units into meters
+    if (units == 'cm') {
+      length = (cutSize/100);
+    } else if(units == 'feet') {
+      length = (cutSize * 0.3048);
+    }else if (units == 'in') {
+      length = (cutSize * 0.0254);
+    }else if (units == 'm') {
+      length = cutSize;
+    }else if (units == '') {
+      alert('Select the Units of Measurements!');
+    }
     var folds = parseFloat($('#selectFold').val());
     var totalLength = folds * length;
     var costPerMtr = 2500;
@@ -79,7 +107,23 @@ $(document).ready(function(){
   });
 
   $('#gold').click(function(){
-    var length =  parseFloat($('input#materialSize').val());
+    $('#cartEmpty').hide();
+    $('#cart').show('slow');
+
+    var cutSize =parseFloat($('input#materialSize').val());
+    var length = 0;
+    //convert units into meters
+    if (units == 'cm') {
+      length = (cutSize/100);
+    } else if(units == 'feet') {
+      length = (cutSize * 0.3048);
+    }else if (units == 'in') {
+      length = (cutSize * 0.0254);
+    }else if (units == 'm') {
+      length = cutSize;
+    }else if (units == '') {
+      alert('Select the Units of Measurements!');
+    }
     var folds = parseFloat($('#selectFold').val());
     var totalLength = folds * length;
     var costPerMtr = 1100;
