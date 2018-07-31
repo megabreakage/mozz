@@ -609,15 +609,95 @@ header .form-inline {
 * Date: 24 July 2018 */
 
 .pt{
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .pb{
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
-.ptpb{
-  padding: 10px 0 10px 0;
+.mt{
+  margin: 20px 0 20px 0;
 }
 .dashBoardTab{
   padding: 10px;
+  border-radius: 5px;
+}
+.dateTab{
+  background-color: green;
+  padding: 40px 0 0 0!important;
+}
+.tabLabel{
+  background-color: #ffffff;
+}
+.revenueTab{
+  background: blue;
+  padding: 40px 0 0 0!important;
+}
+.boxBorder{
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+.actionButton{
+    padding: 2px 10px;
+}
+.thead{
+  border: 1px solid #000000 !important;
+}
+.numRows input, .searchDiv input{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.productImage{
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+.platinum{
+  background-color: #E5E4E2;
+}
+.gold{
+  background-color: #D4AF37;
+}
+.diamond{
+  background-color: ##D9EBF4;
+}
+.bronze{
+  background-color: #CD7F32;
+}
+.platinum, .gold, .diamond, .bronze{
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+}
+.platinum h5, .gold h5, .diamond h5, .bronze h5{
+  margin-top: 50px;
+}
+.divCurtains{
+  display: none;
+}
+.measurementRds ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.measurementRds li {
+  padding: 0 10px;
+  float: left;
+}
+.cart{
+  display: none;
+}
+.hooks{
+  display: none;
+  border: 1px solid #E0E0E0;
+  padding: 20px 10px;
+  margin-top: 20px;
   border-radius: 5px;
 }
