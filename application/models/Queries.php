@@ -15,6 +15,15 @@ class Queries extends CI_Model {
     return $this->db->get('product')->result_array();
   }
 
+  public function get_employees(){
+    return $this->db->get('employees')->result_array();
+  }
+
+  public function add_employee($data){
+    //enforce sql securities
+    return $this->db->insert('employees', $data);
+  }
+
 
 
 
