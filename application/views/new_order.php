@@ -49,6 +49,173 @@
         ?></h6>
     </div>
     <form id="newOrder" action="index.html" method="post">
+
+      <div class="row">
+        <!-- Select Product -->
+        <div class="col-md-12">
+          <div class="form-group">
+            <h6 class="text-center pt">Select a Product</h6>
+            <div class="col-md-6 offset-md-3 pt pb">
+              <select data-placeholder="Select a Product..." class="standardSelect form-control" tabindex="1" id="selectProduct">
+                <option value="">Select a Product...</option>
+                <option value="1">Curtains</option>
+                <option value="2">Pillows</option>
+                <option value="3">Bed Covers & Sheets</option>
+                <option value="4">Track Suits</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order -->
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <div class="row">
+            <!-- Specifications -->
+            <div class="col-md-12 form-group" id="specs">
+              <h6 class="text-center pt">Specifications</h6>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="number" name="materialSize" class="form-control" placeholder="Enter length of your Window" id="materialSize">
+                </div>
+                <div class="col-md-6 measurementRds">
+                  <ul><li><input type="radio" name="units" value="m" id="meters" required> meters</li></ul>
+                  <ul><li><input type="radio" name="units" value="cm" id="centimeters" requried> centimeters</li></ul>
+                  <ul><li><input type="radio" name="units" value="in" id="inches" required> inches</li></ul>
+                  <ul><li><input type="radio" name="units" value="ft" id="feet" required> feet</li></ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 pt">
+                  <!-- <label for="" class="form-control-label">Number of Folds</label> -->
+                  <select data-placeholder="Select Number of folds..." class="standardSelect form-control" tabindex="1" id="selectFold">
+                    <option value="">Select Number of folds...</option>
+                    <option value="3">Maximum (x3)</option>
+                    <option value="2.5">Medium (x2 .5)</option>
+                    <option value="2">Minimum (X2)</option>
+                  </select>
+                </div>
+                <div class="col-md-6 measurementRds pt">
+                  <ul><li><input type="radio" name="curtainType" value="Rods" id="rod"> Rod (Eyelets)</li></ul>
+                  <ul><li><input type="radio" name="curtainType" value="Curtain Box" id="curtainBox"> Curtain Box</li></ul>
+                  <div class="col-md-6 offset-md-3 hooks text-center" id="hooks">
+                    <ul><li><input type="radio" name="units" value="1" id="bigHook"> Big</li></ul>
+                    <ul><li><input type="radio" name="units" value="2" id="smallHook"> Small</li></ul>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <!-- Packages -->
+            <div class="col-md-12 divCurtains text-center" id="packages">
+              <div class="col-xs-12 col-sm-12 col-md-12"><a href="#" id="platinum">
+                <div class="col-md-3" id="package">
+                  <div class="col-md-12 alert alert-success platinum" >
+                    <h5>Platium</h5>
+                  </div>
+                </div>
+              </a>
+              <a href="#" id="gold">
+                <div class="col-md-3 " id="package" value="platinum">
+                  <div class="col-md-12 alert alert-success gold" >
+                    <h5>Gold</h5>
+                  </div>
+                </div>
+              </a>
+              <a href="#" id="diamond">
+                <div class="col-md-3 " id="package">
+                  <div class="col-md-12 alert alert-success diamond">
+                    <h5>Diamond</h5>
+                  </div>
+                </div>
+              </a>
+              <a href="#" id="bronze">
+                <div class="col-md-3 " id="package">
+                  <div class="col-md-12 alert alert-success bronze">
+                    <h5>Bronze</h5>
+                  </div>
+                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="col-xs-12 col-sm-12 col-md-4 mt">
+          <div class="card">
+            <div class="card-header">
+              <h6 class="text-center">Your Cart</h6>
+            </div>
+            <div class="card-body">
+              <div class="col-md-8 offset-md-2 alert alert-danger text-center" id="cartEmpty">
+                <small>Your Cart is Empty!</small>
+              </div>
+              <div class="row">
+                <div class="col-md-12 cart" id="cart">
+                  <small>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <strong>Items</strong>
+                      </div>
+                      <div class="col-md-2">
+                        <small><strong>L<i> (m)</i></strong></small>
+                      </div>
+                      <div class="col-md-4 text-right">
+                        <strong>Price</strong>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="row">
+                          <div class="col-md-6 cartList" id="cartList">
+
+                          </div>
+                          <div class="col-md-2" id="length">
+
+                          </div>
+                          <div class="col-md-4 cartPrices text-right" id="cartPrices">
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <hr>
+                        <div class="row">
+                          <div class="col-md-6 text-right">
+                            <p><strong>Total Cost</strong></p>
+                          </div>
+                          <div class="col-md-6">
+                            <p><strong>Ksh. </strong> <span id="totalCost"></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </small>
+                </div>
+              </div>
+              <div class="col-md-12 checkoutCancel">
+                <hr>
+                <div class="row">
+                  <div class="col-md-6 text-center">
+                    <button type="button" name="cancel" id="cancel" class="btn btn-danger">Cancel</button>
+                  </div>
+                  <div class="col-md-6 text-center">
+                    <button type="button" name="checkout" id="checkout" class="btn btn-primary">Checkout</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div id="output">
+
+        </div>
+      </div>
+
+
+      <!-- Customer Information -->
       <div class="col-xs-6 col-sm-6">
         <div class="card">
           <div class="card-header text-center">
@@ -87,77 +254,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-6">
-        <div class="card">
-          <div class="card-header text-center">
-            Order Information
-          </div>
-          <div class="card-body">
-            <div class="form-group">
-              <label class="form-control-label">Choose Products</label>
-              <div class="form-check">
-                <div class="checkbox">
-                  <label for="checkbox1" class="form-check-label ">
-                    <input type="checkbox" id="checkbox1" name="checkbox1" value="1" class="form-check-input"> Curtains
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label for="checkbox2" class="form-check-label ">
-                    <input type="checkbox" id="checkbox2" name="checkbox2" value="2" class="form-check-input"> Pillows
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label for="checkbox3" class="form-check-label ">
-                    <input type="checkbox" id="checkbox3" name="checkbox3" value="3" class="form-check-input"> Bedcovers & Bedsheets
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label for="checkbox3" class="form-check-label ">
-                    <input type="checkbox" id="checkbox3" name="checkbox4" value="4" class="form-check-input"> Track Suits
-                  </label>
-                </div>
-                <div class="checkbox">
-                  <label for="checkbox3" class="form-check-label ">
-                    <input type="checkbox" id="checkbox3" name="checkbox5" value="5" class="form-check-input"> Mosquito Nets
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-control-label">Select Curtain Package</label>
-              <select data-placeholder="Please Select..." class="standardSelect form-control" tabindex="1">
-                <option value="">Please Select...</option>
-                <option value="1">Platinum</option>
-                <option value="2">Gold</option>
-                <option value="3">Diamond</option>
-                <option value="4">Bronze</option>
-              </select>
-            </div>
-            <hr>
-            <div class="form-group">
-              <p class="text-center">Specifications</p>
-              <label class="form-control-label">Curtain Size</label>
-              <div class="input-group">
-                <input type="number" name="size" placeholder="Curtain size" id="size" class="form-control" required>
-                <select data-placeholder="Please Select..." class="standardSelect form-control" tabindex="1">
-                  <option value="1">centimeters (cm)</option>
-                  <option value="2">meters (m)</option>
-                  <option value="3">inches (in)</option>
-                  <option value="4">feet (ft)</option>
-                </select>
-              </div>
-              <label class="form-control-label">Number of Folds</label>
-              <div class="input-group">
-                <select data-placeholder="Please Select..." class="standardSelect form-control" tabindex="1">
-                  <option value="1">Maximum (x3)</option>
-                  <option value="2">Medium (x2.5)</option>
-                  <option value="3">Minimum (x2)</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div class="col-md-12">
         <div class="price">
           Products:
